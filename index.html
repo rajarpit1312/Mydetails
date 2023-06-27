@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <title>personal portfolio website - easy tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/25c575bd63.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/LOGO.jpeg" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Hobbies</a></li>
+                <li><a href="#">portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span> Arpit </span> Raj</h1>
+        </div>
+    </div>
+</div>
+<!----------About----------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Arpit.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title"> About me</h1>
+                <p>I am currently pursuing a BTECH (CSE) degree at SISTER NIVEDITA UNIVERSITY. I completed an internship in cyber security through eduskils and is currently involved in the development of a scholarship management system and an automated voice notes project. I am enthusiastic about exploring various fields and gaining practical experience in our chosen field of study. With a strong educational background and hands-on projects, i am focusing on enhancing our knowledge and skills to pursue a successful career in technology and innovation</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br>Designing Web interfaces</li>
+                    <li><span>Web development</span><br> Web development</li>
+                    <li><span>Machine Learning</span><br>Building AI/ML based system</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>2023-Current</span><br>Frontend development training at Luneblaze</li>
+                    <li><span>Ongoing project</span><br> Scholarship management system <br>Automated voice generator</li>
+                    
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2023-Current</span><br>BTECH from Sister Nivedita University</li>
+                    <li><span>2020</span><br> Higher Secondary from Krishna Public School</li>
+                    <li><span>2018</span><br>Secondary Education from Nath Public School</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------Hobbies---------->
+<div id="Hobbies">
+    <div class="container">
+        <h1 class="sub-title">My Hobbies</h1>
+        <div class="Hobbies-list">
+            <div>
+                <h2>Photography</h2>
+                <p>Capturing moments and expressing creativity through photography.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Gardening</h2>
+                <p>Cultivating plants, flowers, or growing your own fruits and vegetables. </p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Traveling</h2>
+                <p>Exploring new places, experiencing different cultures, and expanding horizons. </p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------------------portfolio-------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work11.png">
+                <div class="layer">
+                    <h3>Scholarship Management System</h3>
+                    <p>This system will identify the most suitable scholarship opportunities for you.</p>
+                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work22.jpg">
+                <div class="layer">
+                    <h3>Automated Notes Maker from Audio Recordings</h3>
+                    <p>This system will identify the most suitable scholarship opportunities for you.</p>
+                    <a href="#"><i class="fa-solid fa-square-arrow-up-right"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tablcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tablcontent of tablcontents){
+            tablcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+</body>
+</html>
